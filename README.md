@@ -8,6 +8,6 @@ This is just a list of when I use a certain technique or algorithm. I won't list
 
 ### Primes
 - [Finding the Largest Prime Factor of a Number](./3.c)
-  - Used trial division here to compute primes. There are other algorithms that are more effiencient
+  - Used trial division here to compute primes. There are other algorithms that are more efficient
 - [Finding the 10001st Prime Number](./7.c)
   - Sieve of Eratosthenes is an algorithm for creating a list of the first n primes
