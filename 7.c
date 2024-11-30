@@ -1,4 +1,5 @@
 // Sieve of Eratosthenes
+// Sieve algorithm is an efficient way to find primes
 // By no means a finished solution but its a start
 #include <stdio.h>
 
