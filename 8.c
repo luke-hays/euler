@@ -2,7 +2,7 @@
 #include <ctype.h>
 
 const int BIG_NUM_LENGTH = 1000;
-const int WINDOW_SIZE = 4;
+const int WINDOW_SIZE = 13;
 
 int main() {
   FILE *file = fopen("big_num.txt", "r");
@@ -24,13 +24,10 @@ int main() {
 
   fclose(file);
 
-  // product of 13 digits will result in a large number that overflows. Best to probably create a multiply function for large numbers
-  // Will also need a way to compare the large number
-  // Not a complete solution, can handle a size 4 window though
-  int max_product = 0;
+  unsigned long long max_product = 0;
   int right = WINDOW_SIZE-1;
   while (right < BIG_NUM_LENGTH) {
-    int product = 1;
+    unsigned long long product = 1;
     int containsZero = 0;
 
     for (int i = right; i > right - WINDOW_SIZE; i--) {
@@ -53,7 +50,10 @@ int main() {
     right++;
   }
 
-  printf("Result: %d\n", max_product);
+  // Need to remember to use the correct formatter
+  printf("Result: %llu\n", max_product);
 
   return 0;
 }
+
+# 2147483647
